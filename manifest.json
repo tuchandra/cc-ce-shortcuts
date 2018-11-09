@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "CC CE Shortcuts",
+    "version": "1.0",
+    "author": "Tushar Chandra",
+    "description": "Register keyboard shortcuts on the Click Exchange",
+    
+    "permissions": [
+        "https://clickcritters.com/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.clickcritters.com/clickexchange.php*"
+            ],
+            "js": [ 
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
