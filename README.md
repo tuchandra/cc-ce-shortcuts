@@ -1,6 +1,8 @@
 # cc-ce-shortcuts
 Register keyboard shortcuts for using the ClickCritters Click Exchange.
 
+**Last updated: April 30, 2020** to version 1.1. If you are using an older version, you'll have to remove the current version and reload this one using the steps below.
+
 ## Overview
 [Click Critters](https://www.clickcritters.com) is a virtual adoptable site where users can collect adoptables and play many games. One feature on the site is the 'Click Exchange', where one can level up their own and other players' adoptables. You repeatedly answer questions by choosing between two adoptables, left or right; this Chrome extension registers `j` and `k` as shortcuts for clicking on the left and right adoptables, respectively. It also registers `i` as a shortcut for the 'back' button on an incorrect answer.
 
