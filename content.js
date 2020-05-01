@@ -6,28 +6,28 @@ if (window == top) {
     window.addEventListener('keyup', doKeyPress, false);
 }
 
-var answers, left_answer, right_answer;
+var leftAnswer, rightAnswer;
 window.onload = function() {
-    // get the links to the left and right answers -- 
-    // most of the time the left answer is first, but not always;
-    // you can identify it by seeing if it has left:100px.
-    answers = document.getElementsByClassName("ce_answer_link");
-    if (answers[0].firstChild.style.left == '100px') {
-        left_answer = answers[0];
-        right_answer = answers[1];
-    } else {
-        left_answer = answers[1];
-        right_answer = answers[0];
-    }
+    // Check if we're on the main CE page; if so, there's a lot of extra text at the top
+    // and we have to account for this when setting the y-coordinate.
+    let onHomePage = (document.URL === "https://www.clickcritters.com/clickexchange.php");
+
+    let width = document.body.clientWidth;
+    let xLeft = (width / 2) - 50;
+    let xRight = (width / 2) + 50;
+    let y = onHomePage ? 350 : 150;  // this is a guess, but it works pretty okay
+
+    leftAnswer = document.elementFromPoint(xLeft, y);
+    rightAnswer = document.elementFromPoint(xRight, y);
 }
 
 function doKeyPress(e){
 	if (e.keyCode == left_key) { 
         console.log('left');
-        left_answer.click();
+        leftAnswer.click();
     } else if (e.keyCode == right_key) {
         console.log('right');
-        right_answer.click();
+        rightAnswer.click();
     } else if (e.keyCode == back_key) {
         console.log('back');
         document.links[0].click();
