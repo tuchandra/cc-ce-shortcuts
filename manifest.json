@@ -1,11 +1,11 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "CC CE Shortcuts",
     "version": "1.1",
     "author": "Tushar Chandra",
     "description": "Register keyboard shortcuts on the Click Exchange",
     
-    "permissions": [
+    "host_permissions": [
         "https://clickcritters.com/*"
     ],
 
